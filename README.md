@@ -52,7 +52,7 @@ There's no backend. The site is static and prerendered.
 `dist/` is plain static files, and works on Vercel, Netlify, Cloudflare Pages or GitHub Pages (root domain).
 
 - Build command: `npm run build`. Output directory: `dist`.
-- **Set `SITE_URL`** to the real domain once you have one (e.g. `SITE_URL=https://example.com npm run build`). This adds canonical URLs, `og:url`, `og:image` (`/og.png`) and `sitemap.xml`. Without it those are omitted on purpose, so no domain is guessed.
+- **Set `SITE_URL`** to the real domain once you have one (on Vercel this is automatic: the build falls back to `VERCEL_PROJECT_PRODUCTION_URL`) (e.g. `SITE_URL=https://example.com npm run build`). This adds canonical URLs, `og:url`, `og:image` (`/og.png`) and `sitemap.xml`. Without it those are omitted on purpose, so no domain is guessed.
 - Hosts serve `404.html` for unknown paths automatically. `npm run preview` doesn't, and just returns a plain 404.
 - GitHub Pages under a sub-path (`user.github.io/repo/`) would need Vite's `base` option; a user site or custom domain works as is.
 

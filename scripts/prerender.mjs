@@ -9,7 +9,9 @@ const dist = path.join(root, 'dist');
 const ssrDir = path.join(root, 'dist-ssr');
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
 const { render, routes } = await import(pathToFileURL(path.join(ssrDir, 'entry-server.js')).href);
-const SITE = (process.env.SITE_URL || '').replace(/\/$/, '');
+// SITE_URL wins; on Vercel, fall back to the project's production domain, which Vercel exposes to every build.
+const vercelProd = process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : '';
+const SITE = (process.env.SITE_URL || vercelProd).replace(/\/$/, '');
 
 // Preload the two Latin web fonts the first screen is set in, so they're usually ready before first paint
 // and the hero doesn't re-wrap (layout shift) when they swap in. File names are hashed, so find them in the build.
