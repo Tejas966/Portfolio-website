@@ -88,7 +88,7 @@ Repo: https://github.com/Tejas966/Stock-Screener-project (JS/Python/PHP; 6 commi
    - 162 tests reported passing.
 6. **Interesting decision.** It refuses to zero-fill or invent data, and the AI is constrained to calculated facts and checked for ungrounded numbers.
 7. **Status.** Works locally in demo mode. **All figures in demo mode are illustrative, generated data.** The FMP live provider is "implemented but not verified live". A live Gemini response was never produced because there was no API key (README §10).
-8. **Evidence.** README, docs and test suites. No hosted demo, no screenshots.
+8. **Evidence.** README, docs and test suites. No hosted demo, no screenshots. *Update (22 Oct 2026):* Tejas supplied a screenshot of the home page running locally in demo mode (banner: "all prices and financial figures are illustrative"). It is used on the site.
 9. **Important correction to the brief.** The brief describes "DCF valuation, CAPM, discount rates". **FundamentalX contains no DCF or CAPM** (no matches in the README; it covers P/E, P/B, EV/EBITDA, ROE, ROCE, CAGR, D/E, FCF and similar). DCF, CAPM and WACC appear in the **BITSoM capstone** instead (§2.4). Either there's another, unpublished screener repo, or the two were merged in memory. **This needs confirmation.**
 
 ### 2.3 MPLADS AI Risk Intelligence (Smart India Hackathon 2026, PS SIH26102)

@@ -184,6 +184,8 @@ Decide your next action.` },
   },
 ];
 
+const fxHomeAlt = 'The FundamentalX home page in demo mode: a banner saying all prices and financial figures are illustrative, the headline “Read a company’s numbers before you form an opinion.”, a company search box, and featured companies (HDFC Bank, ICICI Bank, Infosys, Reliance Industries, TCS).';
+
 const fxSections: CaseSection[] = [
   {
     id: 'overview',
@@ -191,6 +193,7 @@ const fxSections: CaseSection[] = [
     blocks: [
       { type: 'p', text: 'FundamentalX is a fundamental-analysis platform for 23 large NSE-listed companies (25 listings, including BSE). You type a company or ticker. It resolves the listing, fetches statements through a provider abstraction, normalises units and sign conventions, and has a Python engine calculate valuation, profitability, growth, solvency and cash-flow metrics. Everything is shown across dedicated analysis pages, with an optional AI explanation.' },
       { type: 'note', text: 'This is an educational course project. In demo mode every price and financial figure is illustrative, generated data, and the site labels it as such. It is not investment advice and makes no predictions.' },
+      { type: 'figure', figure: { src: '/images/fundamentalx-home.webp', alt: fxHomeAlt, width: 1002, height: 608, caption: 'The home page, running locally in demo mode. The banner says it plainly: every price and figure is illustrative, generated data.' } },
       { type: 'diagram', id: 'fx-board' },
     ],
   },
@@ -374,7 +377,8 @@ export const projects: Project[] = [
       { label: 'Route-level pages', value: '28' },
     ],
     repo: 'https://github.com/Tejas966/Stock-Screener-project',
-    monitor: { label: 'CAM 02 · Metric engine', board: 'fx-board' },
+    bg: '/images/fundamentalx-home.webp',
+    monitor: { src: '/images/fundamentalx-home.webp', alt: fxHomeAlt, width: 1002, height: 608, label: 'CAM 02 · Home, demo mode', position: 'center top' },
     context: 'Solo · third-year Web Technology course project',
     role: 'Solo: all four services, built with AI coding agents',
     timeline: 'October 2026',
