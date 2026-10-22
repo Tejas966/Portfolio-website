@@ -1,0 +1,29 @@
+/* Comparison page. Deliberately neutral system styling so it doesn't bias the choice. */
+.ci { --ink: #18181b; --muted: #52525b; --line: #e4e4e7; --bg: #fafafa; background: var(--bg); color: var(--ink); font: 400 16px/1.6 system-ui, -apple-system, 'Segoe UI', sans-serif; min-height: 100vh; }
+.ci main { max-width: 1200px; margin: 0 auto; padding: clamp(32px, 6vw, 72px) 16px 80px; }
+.ci a:focus-visible, .ci [tabindex]:focus-visible { outline: 2px solid #2563eb; outline-offset: 3px; }
+.ci-eyebrow { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 .5em; }
+.ci-head h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.05; letter-spacing: -.02em; margin: 0 0 .4em; }
+.ci-lede { max-width: 44em; color: #3f3f46; font-size: 18px; margin: 0 0 40px; }
+.ci-grid { list-style: none; padding: 0; margin: 0 0 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.ci-card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+.ci-card__link { display: block; text-decoration: none; color: inherit; }
+.ci-card__link:hover h2 { color: #2563eb; }
+.ci-card h2 { font-size: 26px; margin: 0 0 .4em; letter-spacing: -.01em; }
+.ci-card > p { color: #3f3f46; margin: 0 0 1em; }
+.ci-swatch { display: flex; height: 56px; border-radius: 8px; overflow: hidden; margin-bottom: 16px; border: 1px solid var(--line); }
+.ci-swatch span { flex: 1; }
+.ci-card dl { margin: 0; font-size: 14px; }
+.ci-card dl div { padding: 8px 0; border-top: 1px solid var(--line); }
+.ci-card dt { font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.ci-card dd { margin: 2px 0 0; }
+.ci-table h2, .ci-rec h2, .ci-notes h2 { font-size: 24px; margin: 0 0 .6em; }
+.ci-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: #fff; margin-bottom: 48px; }
+.ci table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 14px; }
+.ci th, .ci td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.ci thead th { background: #f4f4f5; }
+.ci tbody th { font-weight: 600; white-space: nowrap; }
+.ci-rec { background: #18181b; color: #fafafa; border-radius: 12px; padding: 24px; margin-bottom: 40px; }
+.ci-rec p { margin: 0; max-width: 60em; color: #d4d4d8; }
+.ci-notes ul { padding-left: 1.2em; color: #3f3f46; }
+.ci code { font-size: .9em; background: #f4f4f5; padding: 1px 5px; border-radius: 4px; }
